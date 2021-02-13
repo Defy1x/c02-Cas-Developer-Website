@@ -3,11 +3,27 @@
   --orange-text: #df633a;
   --light-gray: #fdfeff;
   --black-text: #000;
-  --white-text: #FFF;
+  --white: #FFF;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
   font-family: 'EB Garamond', serif;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  background-color: var(--white);
+  position: fixed;
+  z-index: 1;
+}
+
+main {
+  margin-top: 100px;
 }
 
 a {
@@ -17,11 +33,12 @@ a {
   color: var(--orange-text);
 }
 
+
 a:hover {
   cursor: pointer;
   cursor: hand;
+  text-decoration: underline;
 }
-
 
 h1 {
   font-size: 54px; /*this needs to be changed to em*/
@@ -59,9 +76,11 @@ footer p {
 }
 
 .container{
-  width: 800px;
+  width: 900px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  /* margin: 0 auto; */
 }
 
 
@@ -74,7 +93,10 @@ nav ul{
 #profile img{
   height: 250px;
   border-radius: 50%;
-  border: 2px #666 solid;
+  border: 1px #666 solid;
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
 }
 
 section p{
@@ -103,7 +125,7 @@ hr {
     border-top: 1px dashed #74777a;
   border-bottom: 1px dashed #74777a;
   height: 4px;
-  margin: 5em auto 0;
+  margin: 2em auto 0;
 }
 
 hr::after {
@@ -126,15 +148,29 @@ hr::after {
 
 .first-featured-work img{
   height: 450px; /*this needs to be changed with media queries*/
+  transition: transform .2s; /* Animation */
+}
+
+.first-featured-work img:hover{
+   transform: scale(1.02);
+}
+
+.carousel{
+  display: flex;
+  justify-content: space-around;
 }
 
 .carousel-item img{
   height: 150px;
+  transition: transform .2s; /* Animation */
 }
 
+.carousel-item img:hover{
+   transform: scale(1.05);
+}
 button {
   background-color: var(--orange-text);
-  color: var(--white-text); /*this needs to be changed to white*/
+  color: var(--white); /*this needs to be changed to white*/
   font-weight: 800px;
   border-radius: 15px;
   height: 30px;
