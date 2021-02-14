@@ -6,6 +6,7 @@
 /* CLASS STYLES
 /* ID STYLES
 /* IMPORTED MATERIALIZE CSS SNIPPET
+/* MEDIA QUERIES
 
 
 
@@ -405,4 +406,4 @@ textarea.materialize-textarea {
   min-height: 18px;
 }
 
-/***** END MATERIALIZE CSS ********/
+/* MEDIA QUERIES */
