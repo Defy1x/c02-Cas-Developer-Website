@@ -44,7 +44,7 @@ Thanks for reading!
 
 #Links
 ## Deployed Link:
-https://defy1x.github.io/c02-Cas-Developer-Website/index.html
+https://defy1x.github.io/c02-Cas-Developer-Website/
 
 #Usage
 ## Final screenshot
