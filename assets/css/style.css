@@ -494,6 +494,11 @@ textarea.materialize-textarea {
   .container{
     width: 350px;
   }
+  header {
+  position: relative;
+  flex-wrap: wrap;
+  width: 350px;
+  }
   section p{
     font-size: 20px;
     line-height: 36px;
