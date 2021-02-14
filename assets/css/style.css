@@ -5,7 +5,7 @@
 /* HR ELEMENT
 /* CLASS STYLES
 /* ID STYLES
-/* IMPORTED MATERIALIZE CSS SNIPPET
+/* IMPORTED MATERIALIZE CSS SNIPPET (file in css for reference)
 /* MEDIA QUERIES
 
 
@@ -75,17 +75,6 @@ strong {
   color: var(--black-text);
 }
 
-header {
-  background-color: var(--white);
-  padding-bottom: 10px;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  z-index: 1;
-  width: 900px;
-}
-
 li{
   padding-left: 20px;
   padding-right: 20px;
@@ -94,15 +83,6 @@ li{
 
 li:hover{
    transform: scale(1.05);
-}
-
-main {
-  padding-top: 100px;
-}
-
-section {
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 button {
@@ -117,6 +97,30 @@ button {
 
 button:hover{
   transform: scale(1.05);
+}
+
+header {
+  background-color: var(--white);
+  padding-bottom: 10px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  width: 900px;
+}
+
+nav {
+  padding-top: 10px;
+}
+
+main {
+  padding-top: 120px;
+}
+
+section {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /*SELECTOR STYLES*/
@@ -314,6 +318,7 @@ input[type=datetime-local]:not(.browser-default),
 input[type=tel]:not(.browser-default),
 input[type=number]:not(.browser-default),
 input[type=search]:not(.browser-default),
+
 textarea.materialize-textarea {
   background-color: transparent;
   border: none;
@@ -407,3 +412,107 @@ textarea.materialize-textarea {
 }
 
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 1024px) {
+  .container{
+    width: 750px;
+  }
+  header {
+  flex-wrap: wrap;
+  width: 800px;
+  }
+  section p{
+    font-size: 26px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    width: 300px;
+  }
+	header {
+	position: relative;
+  flex-wrap: wrap;
+  width: 450px;
+  }
+  main{
+    padding-top: 0px;
+  }
+  footer p{
+    padding-bottom: 30px;
+  }
+  button{
+    padding-bottom: 30px;
+  }
+  .contact-form{
+    display:none;
+  }
+  .first-featured-work{
+    width: 500px;
+  }
+  .first-featured-work img{
+    height: 350px;
+  }
+  .carousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel-item{
+    width: 550px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  .carousel-item img{
+    height: 300px;
+  }
+  #profile{
+    padding-bottom: 20px;
+  }
+  #profile figure{
+    padding-bottom: 20px;
+  }
+  #work{
+    padding: 30px 0 30px 0;
+  }
+  #resume{
+    padding: 30px 0 30px 0;
+  }
+  #resume img{
+    height: 350px;
+  }
+  #contact{
+    padding-top: 20px;
+  }
+  #contact p{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container{
+    width: 400px;
+  }
+  section p{
+    font-size: 20px;
+    line-height: 36px;
+  }
+  .first-featured-work{
+    width: 400px;
+  }
+  .first-featured-work img{
+    height: 250px;
+  }
+  .carousel-item{
+    width: 350px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  .carousel-item img{
+    height: 200px;
+  }
+  #resume img{
+    height: 250px;
+  }
+}
