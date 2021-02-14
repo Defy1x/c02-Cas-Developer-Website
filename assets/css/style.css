@@ -492,12 +492,15 @@ textarea.materialize-textarea {
 
 @media screen and (max-width: 480px) {
   .container{
-    width: 350px;
+    width: 400px;
   }
   header {
   position: relative;
   flex-wrap: wrap;
-  width: 425px;
+  width: 450px;
+  }
+  span{
+    font-size: 14px;
   }
   section p{
     font-size: 20px;
