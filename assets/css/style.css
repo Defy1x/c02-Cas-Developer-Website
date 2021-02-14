@@ -497,17 +497,17 @@ textarea.materialize-textarea {
   header {
   position: relative;
   flex-wrap: wrap;
-  width: 450px;
+  width: 425px;
   }
   section p{
     font-size: 20px;
     line-height: 36px;
   }
   .first-featured-work{
-    width: 300px;
+    width: 350px;
   }
   .first-featured-work img{
-    height: 250px;
+    height: 200px;
   }
   .carousel-item{
     width: 350px;
