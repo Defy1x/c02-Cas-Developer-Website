@@ -16,23 +16,12 @@ body {
   justify-content: center;
 }
 
-header {
-  background-color: var(--white);
-  position: fixed;
-  z-index: 1;
-}
-
-main {
-  margin-top: 100px;
-}
-
 a {
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 100;
   text-decoration: none;
   color: var(--orange-text);
 }
-
 
 a:hover {
   cursor: pointer;
@@ -44,26 +33,73 @@ h1 {
   font-size: 54px; /*this needs to be changed to em*/
   font-weight: 200;
   color: var(--dark-gray-text);
+  padding-bottom: 5px;
+}
+
+h2 {
+  font-size: 46px; /*this needs to be changed to em*/
+  font-weight: 100;
+  color: var(--dark-gray-text);
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 span{
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 100;
-  font-size: 17px; /*this needs to changed to em*/
+  font-size: 1.1em; /*this needs to changed to em*/
   color: var(--dark-gray-text);
   text-transform: uppercase;
-}
-
-h2{
-  font-size: 46px; /*this needs to be changed to em*/
-  font-weight: 100;
-  color: var(--dark-gray-text);
+  padding-bottom: 10px;
 }
 
 strong {
-  font-size: 26px;
+  font-size: 1.1em;
   font-weight: 800;
   color: var(--black-text);
+}
+
+header {
+  background-color: var(--white);
+  padding-bottom: 10px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  width: 900px;
+}
+
+nav ul{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+li{
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+}
+
+li:hover{
+   transform: scale(1.05);
+}
+
+main {
+  padding-top: 100px;
+}
+
+section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 28px; /* this needs to be em*/
+  line-height: 44px; /*this need to be em*/
+  font-weight: 100;
+  color: var(--dark-gray-text);
 }
 
 footer p {
@@ -73,41 +109,8 @@ footer p {
   color:var(--dark-gray-text);
   text-transform: uppercase;
   padding-top: 20px;
-}
-
-.container{
-  width: 900px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* margin: 0 auto; */
-}
-
-
-nav ul{
-  display:flex;
-  justify-content: space-between;
-}
-
-
-#profile img{
-  height: 250px;
-  border-radius: 50%;
-  border: 1px #666 solid;
-  box-shadow: 10px 10px 5px #ccc;
-  -moz-box-shadow: 10px 10px 5px #ccc;
-  -webkit-box-shadow: 10px 10px 5px #ccc;
-}
-
-section p{
-  font-size: 28px; /* this needs to be em*/
-  line-height: 44px; /*this need to be em*/
-  font-weight: 100;
-  color: var(--dark-gray-text);
-}
-
-section {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 hr {
@@ -146,9 +149,33 @@ hr::after {
   background: var(--light-gray);
 }
 
+button {
+  background-color: var(--orange-text);
+  border-radius: 15px;
+  height: 40px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  width: 400px;
+}
+
+.container{
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-featured-work {
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
 .first-featured-work img{
   height: 450px; /*this needs to be changed with media queries*/
   transition: transform .2s; /* Animation */
+  padding: 20px 10px 20px 10px;
 }
 
 .first-featured-work img:hover{
@@ -160,6 +187,9 @@ hr::after {
   justify-content: space-around;
 }
 
+.carousel-item{
+  width: 266px;
+}
 .carousel-item img{
   height: 150px;
   transition: transform .2s; /* Animation */
@@ -168,12 +198,57 @@ hr::after {
 .carousel-item img:hover{
    transform: scale(1.05);
 }
-button {
-  background-color: var(--orange-text);
-  color: var(--white); /*this needs to be changed to white*/
-  font-weight: 800px;
-  border-radius: 15px;
-  height: 30px;
-  padding: 20px 20px;
-  text-transform: uppercase;
+
+.carousel p{
+  font-size: 22px;
+  line-height: 1.5em;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#profile img{
+  height: 250px;
+  border-radius: 50%;
+  border: 1px #666 solid;
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+}
+
+#profile p{
+  padding-top: 20px;
+}
+
+#work{
+  padding-top: 120px;
+}
+
+#resume {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#resume p{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#download{
+  color: var(--white);
+}
+
+#contact{
+  padding-top: 120px;
+}
+
+#fa-no-padding{
+  padding-left: 0px !important;
 }
