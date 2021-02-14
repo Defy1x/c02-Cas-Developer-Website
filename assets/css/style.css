@@ -1,6 +1,6 @@
 :root{
   --dark-gray-text: #44474a;
-  --orange-text: #df633a;
+  --red: #e60a0a;
   --light-gray: #fdfeff;
   --black-text: #000;
   --white: #FFF;
@@ -20,7 +20,7 @@ a {
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 100;
   text-decoration: none;
-  color: var(--orange-text);
+  color: var(--red);
 }
 
 a:hover {
@@ -41,7 +41,7 @@ h2 {
   font-weight: 100;
   color: var(--dark-gray-text);
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 span{
@@ -106,9 +106,9 @@ footer p {
   font-family: 'Libre Franklin', sans-serif;
   font-size: 16px;
   font-weight: 100;
-  color:var(--dark-gray-text);
+  color:var(--red);
   text-transform: uppercase;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 20px;
   text-align: center;
 }
@@ -150,12 +150,17 @@ hr::after {
 }
 
 button {
-  background-color: var(--orange-text);
+  background-color: var(--red);
   border-radius: 15px;
   height: 40px;
   padding: 10px 20px;
   text-transform: uppercase;
   width: 400px;
+  transition: transform .2s; /* Animation */
+}
+
+button:hover{
+  transform: scale(1.05);
 }
 
 .container{
@@ -222,7 +227,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 130px;
+  padding-bottom: 110px;
 }
 
 #profile img{
@@ -236,6 +241,7 @@ button {
 
 #profile p{
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #work{
@@ -263,8 +269,114 @@ button {
 
 #contact{
   padding-top: 120px;
+  text-align: center;
 }
 
 #fa-no-padding{
   padding-left: 0px !important;
+}
+
+/* Text inputs */
+input:not([type]),
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=datetime]:not(.browser-default),
+input[type=datetime-local]:not(.browser-default),
+input[type=tel]:not(.browser-default),
+input[type=number]:not(.browser-default),
+input[type=search]:not(.browser-default),
+textarea.materialize-textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #e60a0a;
+  border-radius: 0;
+  outline: none;
+  height: 2rem;
+  width: 100%;
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  padding: 40px 0px 0px 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-transition: border .3s, -webkit-box-shadow .3s;
+  transition: border .3s, -webkit-box-shadow .3s;
+  transition: box-shadow .3s, border .3s;
+  transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+}
+
+.input-field {
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.input-field.inline {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.input-field.inline input,
+.input-field.inline .select-dropdown {
+  margin-bottom: 1rem;
+}
+
+.input-field.col .prefix ~ label,
+.input-field.col .prefix ~ .validate ~ label {
+  width: calc(100% - 3rem - 1.5rem);
+}
+
+.input-field > label {
+  color: var(--dark-gray-text);
+  position: absolute;
+  top: 10;
+  left: 0;
+  font-size: 1rem;
+  cursor: text;
+  -webkit-transition: color .2s ease-out, -webkit-transform .2s ease-out;
+  transition: color .2s ease-out, -webkit-transform .2s ease-out;
+  transition: transform .2s ease-out, color .2s ease-out;
+  transition: transform .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+  text-align: initial;
+  -webkit-transform: translateY(12px);
+          transform: translateY(12px);
+}
+
+.input-field > label:not(.label-icon).active {
+  -webkit-transform: translateY(-14px) scale(0.8);
+          transform: translateY(-14px) scale(0.8);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  height: 3rem;
+  background-color: transparent;
+}
+
+textarea.materialize-textarea {
+  line-height: normal;
+  overflow-y: hidden;
+  /* prevents scroll bar flash */
+  padding: 50px 0 0 0;
+  /* prevents text jump on Enter keypress */
+  resize: none;
+  min-height: 5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Character Counter */
+.character-counter {
+  min-height: 18px;
 }
