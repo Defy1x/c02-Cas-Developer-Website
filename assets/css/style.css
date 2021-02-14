@@ -492,14 +492,14 @@ textarea.materialize-textarea {
 
 @media screen and (max-width: 480px) {
   .container{
-    width: 400px;
+    width: 350px;
   }
   section p{
     font-size: 20px;
     line-height: 36px;
   }
   .first-featured-work{
-    width: 400px;
+    width: 350px;
   }
   .first-featured-work img{
     height: 250px;
