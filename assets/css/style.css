@@ -1,11 +1,26 @@
+/* INDEX:
+/* COLOR THEMES
+/* GLOBAL STYLES
+/* SELECTOR STYLES
+/* HR ELEMENT
+/* CLASS STYLES
+/* ID STYLES
+/* IMPORTED MATERIALIZE CSS SNIPPET
+
+
+
+/*COLOR THEMES*/
 :root{
   --dark-gray-text: #44474a;
   --red: #e60a0a;
   --light-gray: #fdfeff;
   --black-text: #000;
   --white: #FFF;
+  --line-gray:#74777a;
+  --shadow: #ccc;
 }
 
+/*GLOBAL STYLES*/
 html {
     scroll-behavior: smooth;
 }
@@ -70,12 +85,6 @@ header {
   width: 900px;
 }
 
-nav ul{
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 li{
   padding-left: 20px;
   padding-right: 20px;
@@ -93,6 +102,27 @@ main {
 section {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+button {
+  background-color: var(--red);
+  border-radius: 15px;
+  height: 40px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  width: 350px;
+  transition: transform .2s; /* Animation */
+}
+
+button:hover{
+  transform: scale(1.05);
+}
+
+/*SELECTOR STYLES*/
+nav ul{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 section p {
@@ -113,9 +143,11 @@ footer p {
   text-align: center;
 }
 
+/*STYLING FOR AWESOME HORIZONTAL RULE AND ELEMENT*/
+
 hr {
-  border-top: 1px dashed #74777a;
-  border-bottom: 1px dashed #74777a;
+  border-top: 1px dashed var(--line-gray);
+  border-bottom: 1px dashed var(--line-gray);
   overflow: visible;
     padding: 0;
     border: none;
@@ -125,8 +157,8 @@ hr {
     border-bottom-color: currentcolor;
     border-bottom-style: none;
     border-bottom-width: medium;
-    border-top: 1px dashed #74777a;
-  border-bottom: 1px dashed #74777a;
+    border-top: 1px dashed var(--line-gray);
+  border-bottom: 1px dashed var(--line-gray);
   height: 4px;
   margin: 2em auto 0;
 }
@@ -149,19 +181,7 @@ hr::after {
   background: var(--light-gray);
 }
 
-button {
-  background-color: var(--red);
-  border-radius: 15px;
-  height: 40px;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  width: 400px;
-  transition: transform .2s; /* Animation */
-}
-
-button:hover{
-  transform: scale(1.05);
-}
+/*CLASS STYLES*/
 
 .container{
   width: 900px;
@@ -218,11 +238,12 @@ button:hover{
 
 .resume-img-container img{
   height: 350px;
-  box-shadow: 5px 5px 5px #ccc;
-  -moz-box-shadow: 5px 5px 5px #ccc;
-  -webkit-box-shadow: 5px 5px 5px #ccc;
+  box-shadow: 5px 5px 5px var(--shadow);
+  -moz-box-shadow: 5px 5px 5px var(--shadow);
+  -webkit-box-shadow: 5px 5px 5px var(--shadow);
 }
 
+/*ID STYLES*/
 #profile {
   display: flex;
   flex-direction: column;
@@ -234,9 +255,9 @@ button:hover{
   height: 250px;
   border-radius: 50%;
   border: 1px #666 solid;
-  box-shadow: 10px 10px 5px #ccc;
-  -moz-box-shadow: 10px 10px 5px #ccc;
-  -webkit-box-shadow: 10px 10px 5px #ccc;
+  box-shadow: 10px 10px 5px var(--shadow);
+  -moz-box-shadow: 10px 10px 5px var(--shadow);
+  -webkit-box-shadow: 10px 10px 5px var(--shadow);
 }
 
 #profile p{
@@ -276,6 +297,9 @@ button:hover{
   padding-left: 0px !important;
 }
 
+
+/**** ALL CSS BELOW USED TO STYLE TEXT FORMS FROM MATERILIZE.CSS INCLUDED IN CSS FOLDER******/
+
 /* Text inputs */
 input:not([type]),
 input[type=text]:not(.browser-default),
@@ -292,7 +316,7 @@ input[type=search]:not(.browser-default),
 textarea.materialize-textarea {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #e60a0a;
+  border-bottom: 1px solid var(--red);
   border-radius: 0;
   outline: none;
   height: 2rem;
@@ -380,3 +404,5 @@ textarea.materialize-textarea {
 .character-counter {
   min-height: 18px;
 }
+
+/***** END MATERIALIZE CSS ********/
